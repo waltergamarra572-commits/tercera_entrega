@@ -1,0 +1,225 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background-color: slateblue;
+}
+
+
+
+
+header {
+  background-image: url(../imagenes/rock/para-header.jpeg);
+  background-size: cover;       /* llena el ancho/alto */
+  background-position: center;  /* centra la imagen */
+  background-repeat: no-repeat;
+  min-height: 300px;            /* altura mínima*/
+  color: #fff; /* blanco para contraste */
+
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 2rem;
+}
+
+.clase1 {
+  display: flex;
+}
+
+
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+header nav ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+main .el-main img {
+  width: 400px;
+  padding: 20px;
+  padding-right: 100px;
+}
+
+main .el-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
+}
+
+main .texto {
+  text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+/* ----- estilos de section con grid ----- */
+
+/* Contenedor principal en grid de 4 columnas */
+.grid-secciones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 20px; /* separación entre columnas/filas */
+  padding: 20px;
+  cursor: pointer;
+}
+
+/* Estilo de cada columna */
+.grid-secciones .item {
+  background: tomato;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Colorea el título y también el link interno */
+.item h2,
+.item h2 a {
+  color: #000;          /* negro */
+  text-decoration: none; /* sin subrayado */
+}
+
+/* Opcional: color al pasar el mouse */
+.item h2 a:hover {
+  color: #333;          /* un negro un poco más claro/oscuro */
+}
+
+.grid-secciones .item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Responsivo: en pantallas medianas 2 columnas */
+@media (max-width: 992px) {
+  .grid-secciones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* En móviles 1 columna */
+@media (max-width: 576px) {
+  .grid-secciones {
+    grid-template-columns: 1fr;
+  }
+}
+
+section main .texto span {
+  text-align: center;
+  color: tomato;
+}
+
+/* -----------------servicios----------------------- */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  display: block;                 /* Hace que el <a> ocupe todo el bloque */
+  background: #f3f3f3;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;          /* Sin subrayado */
+  color: #000;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: #6A5ACD;
+  color: #fff;
+}
+
+/* ----------------grid fotos------------------------- */
+#para-probar .probando {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: black;
+  gap: 1rem;
+}
+
+#para-probar .probando img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.probando {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 300px;  /* altura de fila */
+  gap: 1rem;
+  margin: 30px;
+}
+
+section div .para-tres {
+  grid-column: span 3;
+}
+
+#para-probar .para-tres img {
+  grid-template-rows: 300px;
+}
+
+/* -------- estilo de carrusel -------- */
+.carousel-inner {
+  width: 80%;          /* o un valor fijo como 600px */
+  max-width: 800px;
+  max-height: 500px;    /* ancho máximo */
+  margin: 0 auto;      /* centra horizontalmente */
+  border: 3px solid #444; /* borde para “enmarcar” */
+  border-radius: 6px;   /* bordes redondeados opcionales */
+}
+
+/* Estilos del footer */
+.site-footer {
+  background-color: #222;    /* color de fondo oscuro */
+  color: #f1f1f1;            /* texto claro */
+  text-align: center;
+  padding: 20px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-footer p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #f1f1f1;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #6A5ACD;   /* color de hover (púrpura) */
+}
+footer {
+  text-align: center;
+}
