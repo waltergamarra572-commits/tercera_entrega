@@ -1,0 +1,17 @@
+// _variables.scss
+$color_principal:slateblue;
+$color_secundario: tomato;
+$color_tres: green;
+
+//mixin sin parametros //
+@mixin flex_header{
+    display: flex;
+    justify-content: space-between;
+    align-items:normal;
+}
+
+@mixin flex_patron{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
